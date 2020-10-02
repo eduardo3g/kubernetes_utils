@@ -1,7 +1,7 @@
 # kubernetes_utils
 Useful Kubernetes CLI commands 👷🏽
 
-## Sercret keys
+## Secret keys
 
 [X] Create a secret inside a Kubernetes cluster
 For example, you application uses a Stripe integration that requires a Stripe secret key. However, you don't want to write it in plain text in your code.
