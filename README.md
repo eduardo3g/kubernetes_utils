@@ -3,8 +3,7 @@ Useful Kubernetes CLI commands 👷🏽
 
 ## Secret keys
 
-[X] Create a secret inside a Kubernetes cluster
-For example, you application uses a Stripe integration that requires a Stripe secret key. However, you don't want to write it in plain text in your code.
+[X] Create a secret inside a Kubernetes cluster. For example, your application uses a Stripe integration that requires a secret key. However, you don't want to write it in plain text in your code. To solve that you create a secret key inside your Kubernetes cluster, then you'll be able to access them as environment variables.
 
 ```
 kubectl create secret generic [secret-name] --from-literal [key]=[value]
