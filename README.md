@@ -31,3 +31,26 @@ It will allow you to access this environment variable with ```process.env.STRIPE
 ```
 kubectl get secrets
 ```
+
+## Contexts
+
+[X] Imagine you're running a local Kubernetes cluster in your local machine with Minikube. However, you also have Kubernetes cluster deployed at Digital Ocean. Eventually, you'll want to switch between contexts, that is, your local context or from Digital Ocean. To do so, follow the steps below:
+
+1. First, connect to your Digital Ocean cluster with the following command: ```doctl kubernetes cluster kubeconfig save <CLUSTER_NAME>```
+
+2. ``` kubectl config view ```: inside of the key contexts there's an array of available contexts.
+```
+contexts:
+- context:
+    cluster: my-digitalocean-cluster
+    user: my-digitalocean-admin
+  name: my-digitalocean-app
+- context:
+    cluster: minikube
+    user: minikube
+  name: minikube
+current-context: minikube  
+```
+In the example above the current context is <b>minikube</b>. If you want to switch to Digital Ocean's context, run the following command:
+
+3. ``` kubectl config use-context my-digitalocean-cluster ```: Once you've done that, run ```kubectl get nodes``` to see the response from Digital Ocean.
