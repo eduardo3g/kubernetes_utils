@@ -54,3 +54,9 @@ current-context: minikube
 In the example above the current context is <b>minikube</b>. If you want to switch to Digital Ocean's context, run the following command:
 
 3. ``` kubectl config use-context my-digitalocean-cluster ```: Once you've done that, run ```kubectl get nodes``` to see the response from Digital Ocean.
+
+## Basics
+[X] Run shell commands inside a pod: ```kubectl -it exec <POD_NAME> sh```. For example:
+```
+kubectl -it exec webapp sh
+```
