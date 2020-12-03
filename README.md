@@ -1,4 +1,4 @@
-# kubernetes_utils
+# k8s Survival Guide
 Useful Kubernetes CLI commands 👷🏽
 
 ## Secret keys
